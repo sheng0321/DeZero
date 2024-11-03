@@ -40,3 +40,20 @@ f = Square()
 print('f type',type(f))
 y = f(x)
 print(y.data)
+#Exponent class
+class Exp(Function):
+    def forward(self,x):
+        return np.exp(x)
+
+A = Square()
+B = Exp()
+C = Square()
+
+x = Variable(np.array(0.5))
+print('============')
+a = A(x)
+print(a.data)
+b = B(a)
+print(b.data)
+y = C(b)
+print(y.data)
